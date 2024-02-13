@@ -15,15 +15,15 @@ def dh_transformation:
 ###this function:
 #######receives a 2D list/array containing the DH parameters of a robotic manipulator and returns a homogenous transformation for the kinematic chain
 def kinematic_chain:
-	###set up a loop that scans the rows and multiplies the transformation 			to get a total transformation.
+	###set up a loop that scans the rows and multiplies the transformation to get a total transformation.
 	
 ###this function:
-#######eceives a homogeneous transformation as input and returns the x, y, z components of the position.
+#######receives a homogeneous transformation as input and returns the x, y, z components of the position.
 def get_pos:
 	###contents in assignment sheet
 	
 
 ###this function:
-#######eceives a homogeneous transformation as input and returns roll-pith-yaw angles 
+#######receives a homogeneous transformation as input and returns roll-pith-yaw angles 
 def get_rot:
 	###order for rotational motion in assignment sheet
