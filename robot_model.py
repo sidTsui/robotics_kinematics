@@ -6,7 +6,6 @@
 import math
 import numpy as np
 
-
 ###this function:
 #######receives the Denavit-Hartenberg parameters
 #######returns a combined homogenous transformation according to this convention.
@@ -22,7 +21,6 @@ def dh_transformation(b, a, d, c):#the order matters, theta, a, d, alpha
     # returns combined homogeneous trans
     return dhtrans
 
-
 ###this function:
 #######receives a 2D list/array containing the DH parameters of a robotic manipulator and returns a homogenous transformation for the kinematic chain
 def kinematic_chain(twoDlist):
@@ -31,16 +29,10 @@ def kinematic_chain(twoDlist):
     for items in twoDlist:#iterates through each set of DH params
         trans = np.matmul(trans, dh_transformation(*items))#finds matrix for transformation
 
-
     return trans
 
-
-
-
-###set up a loop that scans the rows and multiplies the transformation 	to get a total transformation.
-
 ###this function:
-#######eceives a homogeneous transformation as input and returns the x, y, z components of the position.
+#######receives a homogeneous transformation as input and returns the x, y, z components of the position.
 def get_pos(trans):
     ###positions received from assignment sheet
     x = trans[0][3]  ##h14
@@ -48,7 +40,6 @@ def get_pos(trans):
     z = trans[2][3]  ##h34
 
     return x, y, z
-
 
 ###this function:
 #######eceives a homogeneous transformation as input and returns roll-pith-yaw angles
