@@ -24,10 +24,11 @@ def dh_transformation(b, a, d, c):#the order matters, theta, a, d, alpha
 ###this function:
 #######receives a 2D list/array containing the DH parameters of a robotic manipulator and returns a homogenous transformation for the kinematic chain
 def kinematic_chain(twoDlist):
+    #np.eye: returns a 2D array with 1's on the diagonal. source citation: https://numpy.org/doc/stable/reference/generated/numpy.eye.html
     trans = np.eye(4,4) # dH param array 4x4
 
     for items in twoDlist:#iterates through each set of DH params
-        trans = np.matmul(trans, dh_transformation(*items))#finds matrix for transformation
+        trans = np.matmul(trans, dh_transformation(*items))#finds matrix for transformation, *items goes through each
 
     return trans
 
