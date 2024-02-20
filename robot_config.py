@@ -8,7 +8,6 @@ import math
 import numpy as np
 import robot_model
 
-
 ###use to test code:
 ### a1 = 1
 ### a2 = 1
@@ -34,7 +33,6 @@ def two_link():
     print("")
 
     return x, y, z, roll, pitch, yaw
-
 
 def Case1():
     ##slide 37
